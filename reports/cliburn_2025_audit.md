@@ -3,7 +3,8 @@
 
 ## Markdown formatting note
 
-This audit is maintained as readable Markdown with explicit headings, blank lines, bullet lists, and tables. It is not generated as a single compressed paragraph.
+This audit is maintained as readable Markdown with explicit headings, blank lines,
+bullet lists, and tables. It is not generated as a single compressed paragraph.
 
 ## Current regenerated counts
 - `cliburn_2025_works.csv`: 233 data rows.
@@ -63,10 +64,14 @@ This audit is maintained as readable Markdown with explicit headings, blank line
 - Missing data report: passed as a report, with known nulls documented.
 
 ## 9. Whether the dataset is ready for statistical analysis
-Not yet. Candidate-page repertoire and results are now complete enough for source review, but statistical analysis should wait until a human audit confirms the `planned` versus `performed` interpretation and the work/composer normalization choices.
+Not yet. Candidate-page repertoire and results are now complete enough for source
+review, but statistical analysis should wait until a human audit confirms the `planned`
+versus `performed` interpretation and the work/composer normalization choices.
 
 ## 10. Next recommended competition/edition
-Do not move to another competition yet. The next recommended step is human review of Van Cliburn 2025 work normalization and planned/performed status, then rerun validation and only then consider minimal descriptive analysis.
+Do not move to another competition yet. The next recommended step is human review of Van
+Cliburn 2025 work normalization and planned/performed status, then rerun validation and
+only then consider minimal descriptive analysis.
 
 ## 11. Candidate-by-candidate repertoire coverage
 
@@ -102,7 +107,9 @@ Do not move to another competition yet. The next recommended step is human revie
 | Sung Ho Yoo | 6 | 14 | 0 | complete candidate-page capture |
 ## 12. CSV physical-line integrity audit
 
-All cleaned CSV files were rewritten with LF line endings and no embedded newlines in cells. The validation suite confirms one parsed CSV record per physical line. Current physical-line / parsed-record counts:
+All cleaned CSV files were rewritten with LF line endings and no embedded newlines in
+cells. The validation suite confirms one parsed CSV record per physical line. Current
+physical-line / parsed-record counts:
 
 | CSV file | Physical lines | Parsed records | Embedded newline cells | CR bytes |
 |---|---:|---:|---:|---:|
