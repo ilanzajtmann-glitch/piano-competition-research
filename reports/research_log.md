@@ -67,3 +67,9 @@
 - Reliability: high; official organizer candidate pages.
 - Unresolved problems: pages list later-round repertoire even for candidates who did not advance; these are retained as `planned` when not reached and `performed` when reached.
 - Manual decisions made: compound composer/transcriber strings such as BACH–BUSONI and SAINT-SAËNS–LISZT–HOROWITZ are preserved as raw composer tokens pending authority normalization; raw repertoire text is preserved in `performance_works.csv`.
+
+## 2026-07-04 — Derived feature/report consistency regeneration
+
+- Regenerated `reports/data_quality_report.md` from current cleaned CSVs after confirming `cliburn_2025_works.csv` has 233 rows and `performance_works.csv` has 374 rows.
+- Added a feature consistency validation that compares every `program_features.csv` row to `performance_works.csv` counts and rejects zero-work feature rows.
+- Result: all 168 feature rows have nonzero `num_works`, and feature counts match the current performance-work table.

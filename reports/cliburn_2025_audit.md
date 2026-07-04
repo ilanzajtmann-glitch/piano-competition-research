@@ -45,6 +45,7 @@
 - Source URL check: passed.
 - Duplicate work check: passed.
 - Repertoire completeness check: passed for all 28 candidates × six candidate-page program sections, with at least one work row per program section.
+- Feature consistency check: passed; `program_features.csv` `num_works` matches `performance_works.csv` counts and has no zero-work rows.
 - Missing data report: passed as a report, with known nulls documented.
 
 ## 9. Whether the dataset is ready for statistical analysis

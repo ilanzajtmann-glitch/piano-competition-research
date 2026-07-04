@@ -30,6 +30,12 @@ PASS repertoire_completeness_check: all 28 candidates have six candidate-page pr
 
 ```
 
+## feature_consistency_check.py: PASS
+```
+PASS feature_consistency_check: program_features num_works matches performance_works and has no zero-work rows
+
+```
+
 ## missing_data_report.py: PASS
 ```
 data/cleaned/cliburn_2025_candidates.csv: 28 rows
