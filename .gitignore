@@ -1,0 +1,8 @@
+data/*.sqlite
+data/**/*.sqlite
+*.db
+*.sqlite
+*.pdf
+*.png
+*.jpg
+*.jpeg
