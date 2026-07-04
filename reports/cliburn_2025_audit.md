@@ -1,5 +1,10 @@
 # Van Cliburn 2025 Audit
 
+
+## Markdown formatting note
+
+This audit is maintained as readable Markdown with explicit headings, blank lines, bullet lists, and tables. It is not generated as a single compressed paragraph.
+
 ## Current regenerated counts
 - `cliburn_2025_works.csv`: 233 data rows.
 - `performance_works.csv`: 374 data rows.
