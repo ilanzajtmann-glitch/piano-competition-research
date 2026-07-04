@@ -2,7 +2,7 @@
 
 ## csv_integrity_check.py: PASS
 ```
-PASS csv_integrity_check: 8 cleaned CSV files have headers, LF line endings, one record per line, and consistent quoting
+PASS csv_integrity_check: 9 cleaned CSV files have headers, LF line endings, one record per line, and consistent quoting
 
 ```
 

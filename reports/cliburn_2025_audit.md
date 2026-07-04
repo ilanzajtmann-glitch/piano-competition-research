@@ -1,5 +1,13 @@
 # Van Cliburn 2025 Audit
 
+## Current regenerated counts
+- `cliburn_2025_works.csv`: 233 data rows.
+- `performance_works.csv`: 374 data rows.
+- `program_features.csv`: 168 data rows.
+- `program_features.csv` zero-work feature rows: 0.
+- Candidates missing candidate-page repertoire after regeneration: 0.
+
+
 ## 1. What was collected
 - 28 official competitors with nationality/representation text and profile source URLs.
 - Verified advancement flags: preliminary, quarterfinalist, semifinalist, finalist.
@@ -54,3 +62,36 @@ Not yet. Candidate-page repertoire and results are now complete enough for sourc
 
 ## 10. Next recommended competition/edition
 Do not move to another competition yet. The next recommended step is human review of Van Cliburn 2025 work normalization and planned/performed status, then rerun validation and only then consider minimal descriptive analysis.
+
+## 11. Candidate-by-candidate repertoire coverage
+
+| Candidate | Program rows | Performance-work rows | Zero-work feature rows | Status |
+|---|---:|---:|---:|---|
+| Piotr Alexewicz | 6 | 13 | 0 | complete candidate-page capture |
+| Jonas Aumiller | 6 | 15 | 0 | complete candidate-page capture |
+| Alice Burla | 6 | 16 | 0 | complete candidate-page capture |
+| Yangrui Cai | 6 | 13 | 0 | complete candidate-page capture |
+| Elia Cecino | 6 | 14 | 0 | complete candidate-page capture |
+| Yanjun Chen | 6 | 16 | 0 | complete candidate-page capture |
+| Jiarui Cheng | 6 | 12 | 0 | complete candidate-page capture |
+| Federico Gad Crema | 6 | 13 | 0 | complete candidate-page capture |
+| Shangru Du | 6 | 16 | 0 | complete candidate-page capture |
+| Roman Fediurko | 6 | 13 | 0 | complete candidate-page capture |
+| Magdalene Ho | 6 | 13 | 0 | complete candidate-page capture |
+| Carter Johnson | 6 | 16 | 0 | complete candidate-page capture |
+| Xiaofu Ju | 6 | 13 | 0 | complete candidate-page capture |
+| Mikhail Kambarov | 6 | 13 | 0 | complete candidate-page capture |
+| David Khrikuli | 6 | 14 | 0 | complete candidate-page capture |
+| Pedro López Salas | 6 | 12 | 0 | complete candidate-page capture |
+| Philipp Lynov | 6 | 10 | 0 | complete candidate-page capture |
+| Jonathan Mamora | 6 | 11 | 0 | complete candidate-page capture |
+| Callum McLachlan | 6 | 14 | 0 | complete candidate-page capture |
+| Evren Ozel | 6 | 11 | 0 | complete candidate-page capture |
+| Chaeyoung Park | 6 | 14 | 0 | complete candidate-page capture |
+| Aristo Sham | 6 | 10 | 0 | complete candidate-page capture |
+| Kotaro Shigemori | 6 | 12 | 0 | complete candidate-page capture |
+| Vitaly Starikov | 6 | 13 | 0 | complete candidate-page capture |
+| Angel Stanislav Wang | 6 | 16 | 0 | complete candidate-page capture |
+| Xuanxiang Wu | 6 | 15 | 0 | complete candidate-page capture |
+| Ryota Yamazaki | 6 | 12 | 0 | complete candidate-page capture |
+| Sung Ho Yoo | 6 | 14 | 0 | complete candidate-page capture |

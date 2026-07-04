@@ -79,3 +79,9 @@
 - Rewrote cleaned CSV files with LF line endings using Python `csv.writer` and added `csv_integrity_check.py`.
 - Verification requires a header row, no NUL bytes, LF-only line endings, uniform column counts, one parsed CSV record per physical line, and valid CSV quoting.
 - Re-ran feature generation and validation after normalization.
+
+## 2026-07-04 — Candidate-by-candidate coverage audit
+
+- Added `data/cleaned/cliburn_2025_repertoire_coverage.csv` as an explicit text audit table derived from current performances, performance-work rows, and feature rows.
+- Verified all 28 candidates have six candidate-page program rows, nonzero performance-work rows, and zero zero-work feature rows.
+- Current generated counts: 233 normalized work rows, 374 performance-work rows, 168 program-feature rows, 0 candidates missing candidate-page repertoire.
