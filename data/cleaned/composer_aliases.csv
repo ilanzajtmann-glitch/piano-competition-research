@@ -1,18 +1,69 @@
 raw_name,normalized_name,notes
-Bach,Bach,initial exact alias
-Montero,Montero,initial exact alias
-Clementi,Clementi,initial exact alias
-Prokofiev,Prokofiev,initial exact alias
-Shostakovich,Shostakovich,initial exact alias
-Brahms,Brahms,initial exact alias
-Bartók,Bartók,initial exact alias
-Schumann,Schumann,initial exact alias
-Scriabin,Scriabin,initial exact alias
-Hindemith,Hindemith,initial exact alias
-Mozart,Mozart,initial exact alias
-Ravel,Ravel,initial exact alias
-Liszt,Liszt,initial exact alias
-Tchaikovsky,Tchaikovsky,initial exact alias
-Beethoven,Beethoven,initial exact alias
-Mendelssohn,Mendelssohn,initial exact alias
-Rachmaninov,Rachmaninov,initial exact alias
+ADÈS,ADÈS,candidate-page exact/compound composer token
+BACH,BACH,candidate-page exact/compound composer token
+BACH-BUSONI,BACH-BUSONI,candidate-page exact/compound composer token
+BACH-HESS,BACH-HESS,candidate-page exact/compound composer token
+BACH-RACHMANINOV,BACH-RACHMANINOV,candidate-page exact/compound composer token
+BALAKIREV,BALAKIREV,candidate-page exact/compound composer token
+BARBER,BARBER,candidate-page exact/compound composer token
+BARTÓK,BARTÓK,candidate-page exact/compound composer token
+BEETHOVEN,BEETHOVEN,candidate-page exact/compound composer token
+BOLCOM,BOLCOM,candidate-page exact/compound composer token
+BRAHMS,BRAHMS,candidate-page exact/compound composer token
+BUSONI,BUSONI,candidate-page exact/compound composer token
+CHEN,CHEN,candidate-page exact/compound composer token
+CHIN,CHIN,candidate-page exact/compound composer token
+CHOPIN,CHOPIN,candidate-page exact/compound composer token
+CLARA,CLARA,candidate-page exact/compound composer token
+CLEMENTI,CLEMENTI,candidate-page exact/compound composer token
+CPE,CPE,candidate-page exact/compound composer token
+DE,DE,candidate-page exact/compound composer token
+DEBUSSY,DEBUSSY,candidate-page exact/compound composer token
+FAURÉ,FAURÉ,candidate-page exact/compound composer token
+FRANCK,FRANCK,candidate-page exact/compound composer token
+GERSHWIN,GERSHWIN,candidate-page exact/compound composer token
+GINASTERA,GINASTERA,candidate-page exact/compound composer token
+GOUNOD-LISZT,GOUNOD-LISZT,candidate-page exact/compound composer token
+GRIEG,GRIEG,candidate-page exact/compound composer token
+GUBAIDULINA,GUBAIDULINA,candidate-page exact/compound composer token
+HAYDN,HAYDN,candidate-page exact/compound composer token
+HINDEMITH,HINDEMITH,candidate-page exact/compound composer token
+HOFMANN,HOFMANN,candidate-page exact/compound composer token
+JANÁČEK,JANÁČEK,candidate-page exact/compound composer token
+LIGETI,LIGETI,candidate-page exact/compound composer token
+LILI,LILI,candidate-page exact/compound composer token
+LISZT,LISZT,candidate-page exact/compound composer token
+LISZT-AUMILLER,LISZT-AUMILLER,candidate-page exact/compound composer token
+LISZT-HOROWITZ,LISZT-HOROWITZ,candidate-page exact/compound composer token
+MEDTNER,MEDTNER,candidate-page exact/compound composer token
+MENDELSSOHN,MENDELSSOHN,candidate-page exact/compound composer token
+MESSIAEN,MESSIAEN,candidate-page exact/compound composer token
+MONTERO,MONTERO,candidate-page exact/compound composer token
+MOZART,MOZART,candidate-page exact/compound composer token
+MUSSORGSKY,MUSSORGSKY,candidate-page exact/compound composer token
+ON̈AÇ,ON̈AÇ,candidate-page exact/compound composer token
+PROKOFIEV,PROKOFIEV,candidate-page exact/compound composer token
+RACHMANINOV,RACHMANINOV,candidate-page exact/compound composer token
+RACHMANINOV-HOROWITZ,RACHMANINOV-HOROWITZ,candidate-page exact/compound composer token
+RAMEAU,RAMEAU,candidate-page exact/compound composer token
+RAVEL,RAVEL,candidate-page exact/compound composer token
+RESPIGHI,RESPIGHI,candidate-page exact/compound composer token
+SAINT-SAËNS,SAINT-SAËNS,candidate-page exact/compound composer token
+SAINT-SAËNS-LISZT-HOROWITZ,SAINT-SAËNS-LISZT-HOROWITZ,candidate-page exact/compound composer token
+SCARLATTI,SCARLATTI,candidate-page exact/compound composer token
+SCHOENBERG,SCHOENBERG,candidate-page exact/compound composer token
+SCHUBERT,SCHUBERT,candidate-page exact/compound composer token
+SCHUBERT-LISZT,SCHUBERT-LISZT,candidate-page exact/compound composer token
+SCHUMANN,SCHUMANN,candidate-page exact/compound composer token
+SCRIABIN,SCRIABIN,candidate-page exact/compound composer token
+SHOSTAKOVICH,SHOSTAKOVICH,candidate-page exact/compound composer token
+SOLER,SOLER,candidate-page exact/compound composer token
+STRAUSS-GRAINGER,STRAUSS-GRAINGER,candidate-page exact/compound composer token
+STRAVINSKY,STRAVINSKY,candidate-page exact/compound composer token
+STRAVINSKY-AGOSTI,STRAVINSKY-AGOSTI,candidate-page exact/compound composer token
+SWEELINCK,SWEELINCK,candidate-page exact/compound composer token
+SZYMANOWSKI,SZYMANOWSKI,candidate-page exact/compound composer token
+TANEYEV,TANEYEV,candidate-page exact/compound composer token
+TCHAIKOVSKY,TCHAIKOVSKY,candidate-page exact/compound composer token
+VINE,VINE,candidate-page exact/compound composer token
+WAGNER-LISZT,WAGNER-LISZT,candidate-page exact/compound composer token

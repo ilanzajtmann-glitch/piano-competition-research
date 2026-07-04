@@ -57,3 +57,13 @@
 - Reliability: high; official candidate page.
 - Unresolved problems: complete candidate-page repertoire still needs to be captured for the other 27 competitors.
 - Manual decisions: raw repertoire text preserved; normalized titles are conservative lower-case variants.
+
+## 2026-07-04 — Complete candidate-page repertoire capture
+
+### Official candidate pages for all 28 competitors
+- URL pattern: https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/{candidate-slug}
+- Extracted: all published candidate-page repertoire items under Preliminary Round, Quarterfinal Round, Semifinal Round - Recital, Semifinal Round - Mozart Concerto, Final Round - Concerto 1, and Final Round - Concerto 2.
+- Retrieved: 2026-07-04.
+- Reliability: high; official organizer candidate pages.
+- Unresolved problems: pages list later-round repertoire even for candidates who did not advance; these are retained as `planned` when not reached and `performed` when reached.
+- Manual decisions made: compound composer/transcriber strings such as BACH–BUSONI and SAINT-SAËNS–LISZT–HOROWITZ are preserved as raw composer tokens pending authority normalization; raw repertoire text is preserved in `performance_works.csv`.
