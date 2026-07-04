@@ -59,10 +59,10 @@ for perf in performances:
         int('variation' in raw_blob),
         int('concerto' in raw_blob),
     ]
-    rows.append([cid,candidates[cid]['full_name'],'Van Cliburn 2025',perf['program_label'],result['reached_round'],qualified,result['finalist'],result['laureate_rank'],len(items),len(composer_ids),len(periods),*feature_flags,len(composer_ids)+len(periods),len(items),'Regenerated from cliburn_2025_performances.csv, performance_works.csv, and cliburn_2025_works.csv. Categories are heuristic, not conclusions.'])
+    rows.append([cid,candidates[cid]['full_name'],'Van Cliburn 2025',perf['program_label'],result['reached_round'],qualified,result['finalist'],result['laureate_rank'],len(items),len(composer_ids),len(periods),*feature_flags,len(composer_ids)+len(periods),len(items),'regenerated_from_cleaned_csvs_heuristic_features'])
 
 with open(OUT,'w',newline='',encoding='utf-8') as f:
-    csv.writer(f).writerows([header]+rows)
+    csv.writer(f, lineterminator='\n').writerows([header]+rows)
 
 zeros=[r for r in rows if r[8]==0]
 if zeros:

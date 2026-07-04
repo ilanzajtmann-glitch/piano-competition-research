@@ -85,3 +85,8 @@
 - Added `data/cleaned/cliburn_2025_repertoire_coverage.csv` as an explicit text audit table derived from current performances, performance-work rows, and feature rows.
 - Verified all 28 candidates have six candidate-page program rows, nonzero performance-work rows, and zero zero-work feature rows.
 - Current generated counts: 233 normalized work rows, 374 performance-work rows, 168 program-feature rows, 0 candidates missing candidate-page repertoire.
+
+## 2026-07-04 — Removed long CSV note text
+
+- Shortened generated CSV note fields to compact single-token values to reduce raw-view wrapping ambiguity.
+- Re-ran validation after confirming every cleaned CSV has matching physical-line and parsed-record counts and zero embedded newline cells.

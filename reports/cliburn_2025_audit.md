@@ -95,3 +95,18 @@ Do not move to another competition yet. The next recommended step is human revie
 | Xuanxiang Wu | 6 | 15 | 0 | complete candidate-page capture |
 | Ryota Yamazaki | 6 | 12 | 0 | complete candidate-page capture |
 | Sung Ho Yoo | 6 | 14 | 0 | complete candidate-page capture |
+## 12. CSV physical-line integrity audit
+
+All cleaned CSV files were rewritten with LF line endings and no embedded newlines in cells. The validation suite confirms one parsed CSV record per physical line. Current physical-line / parsed-record counts:
+
+| CSV file | Physical lines | Parsed records | Embedded newline cells | CR bytes |
+|---|---:|---:|---:|---:|
+| cliburn_2025_candidates.csv | 29 | 29 | 0 | 0 |
+| cliburn_2025_performances.csv | 169 | 169 | 0 | 0 |
+| cliburn_2025_repertoire_coverage.csv | 29 | 29 | 0 | 0 |
+| cliburn_2025_results.csv | 29 | 29 | 0 | 0 |
+| cliburn_2025_works.csv | 234 | 234 | 0 | 0 |
+| composer_aliases.csv | 69 | 69 | 0 | 0 |
+| performance_works.csv | 375 | 375 | 0 | 0 |
+| program_features.csv | 169 | 169 | 0 | 0 |
+| work_aliases.csv | 234 | 234 | 0 | 0 |
