@@ -1,5 +1,11 @@
 # Data Quality Report
 
+## csv_integrity_check.py: PASS
+```
+PASS csv_integrity_check: 8 cleaned CSV files have headers, LF line endings, one record per line, and consistent quoting
+
+```
+
 ## candidate_count_check.py: PASS
 ```
 PASS candidate_count_check: 28 candidates

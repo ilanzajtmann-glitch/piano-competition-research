@@ -55,7 +55,7 @@
 - Extracted: complete listed repertoire for Carter Johnson across rounds.
 - Retrieved: 2026-07-04.
 - Reliability: high; official candidate page.
-- Unresolved problems: complete candidate-page repertoire still needs to be captured for the other 27 competitors.
+- Unresolved problems: superseded by the complete candidate-page repertoire capture below.
 - Manual decisions: raw repertoire text preserved; normalized titles are conservative lower-case variants.
 
 ## 2026-07-04 — Complete candidate-page repertoire capture
@@ -73,3 +73,9 @@
 - Regenerated `reports/data_quality_report.md` from current cleaned CSVs after confirming `cliburn_2025_works.csv` has 233 rows and `performance_works.csv` has 374 rows.
 - Added a feature consistency validation that compares every `program_features.csv` row to `performance_works.csv` counts and rejects zero-work feature rows.
 - Result: all 168 feature rows have nonzero `num_works`, and feature counts match the current performance-work table.
+
+## 2026-07-04 — CSV integrity normalization
+
+- Rewrote cleaned CSV files with LF line endings using Python `csv.writer` and added `csv_integrity_check.py`.
+- Verification requires a header row, no NUL bytes, LF-only line endings, uniform column counts, one parsed CSV record per physical line, and valid CSV quoting.
+- Re-ran feature generation and validation after normalization.

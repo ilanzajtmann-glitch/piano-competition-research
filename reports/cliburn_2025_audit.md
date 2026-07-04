@@ -40,6 +40,7 @@
 - Xiaofu Ju's page states withdrawal for medical reasons; the candidate-page repertoire is still captured because it is officially published.
 
 ## 8. Validation results
+- CSV integrity check: passed; cleaned CSV files have headers, LF line endings, one record per line, and consistent quoting.
 - Candidate count check: passed.
 - Result consistency check: passed.
 - Source URL check: passed.

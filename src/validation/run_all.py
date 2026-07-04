@@ -1,5 +1,5 @@
 import subprocess, sys, pathlib
-checks=['candidate_count_check.py','result_consistency_check.py','source_url_check.py','duplicate_work_check.py','repertoire_completeness_check.py','feature_consistency_check.py','missing_data_report.py']
+checks=['csv_integrity_check.py','candidate_count_check.py','result_consistency_check.py','source_url_check.py','duplicate_work_check.py','repertoire_completeness_check.py','feature_consistency_check.py','missing_data_report.py']
 out=['# Data Quality Report','']
 failed=False
 for c in checks:
