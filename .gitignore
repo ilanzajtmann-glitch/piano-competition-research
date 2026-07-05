@@ -6,3 +6,5 @@ data/**/*.sqlite
 *.png
 *.jpg
 *.jpeg
+
+# Generated binary artifacts (do not track in PRs)
