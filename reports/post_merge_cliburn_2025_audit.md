@@ -1,25 +1,35 @@
-# Post-merge CSV physical-line audit: Van Cliburn 2025 v1
+# Targeted CSV physical-line fix: Van Cliburn 2025
 
 Date: 2026-07-05
-Scope: fix and verify cleaned CSV physical formatting only. No new competition, statistical analysis, API, app, recommender, or architecture work was added.
+Scope: targeted fix only for:
+
+- `data/cleaned/cliburn_2025_candidates.csv`
+- `data/cleaned/cliburn_2025_results.csv`
+
+No new competition was added. No statistical analysis, API, web app, recommender, or architecture work was added.
 
 ## Fix applied
 
-Every CSV under `data/cleaned/` was opened as bytes/CSV, every embedded `\r\n`, `\r`, or `\n` inside cells was replaced with a space, and every file was rewritten with Python `csv.writer(..., lineterminator="\n", quoting=csv.QUOTE_ALL)`.
+Only the two targeted CSV files were rewritten. Embedded `\r\n`, `\r`, and `\n` inside cells were replaced with spaces, and the files were written with Python `csv.writer(..., lineterminator="\n", quoting=csv.QUOTE_ALL)`.
 
-No underlying data values were intentionally changed except newline-to-space normalization inside cells and CSV physical formatting.
+The purpose of the rewrite is physical formatting only:
 
-## Required physical checks
+- header on physical line 1;
+- one candidate/result per physical line;
+- LF line endings;
+- no embedded newline characters inside cells;
+- valid CSV quoting.
+
+## Required local physical checks
 
 ```sh
-$ wc -l data/cleaned/cliburn_2025_candidates.csv
-29 data/cleaned/cliburn_2025_candidates.csv
-
-$ wc -l data/cleaned/cliburn_2025_results.csv
-29 data/cleaned/cliburn_2025_results.csv
+$ wc -l data/cleaned/cliburn_2025_candidates.csv data/cleaned/cliburn_2025_results.csv
+  29 data/cleaned/cliburn_2025_candidates.csv
+  29 data/cleaned/cliburn_2025_results.csv
+  58 total
 ```
 
-## Raw visual inspection commands
+## Local raw visual checks
 
 ```sh
 $ cat -A data/cleaned/cliburn_2025_candidates.csv | head
@@ -47,43 +57,16 @@ $ cat -A data/cleaned/cliburn_2025_results.csv | head
 "9","9","1","Quarterfinal","1","1","0","0","","","https://cliburn.org/news/quarterfinalists-announced-2025-cliburn-competition",""$
 ```
 
-The disputed prize field `Raymond E. Buck Jury Discretionary Award` is on one physical line in the `cat -A` output above.
+The `Raymond E. Buck Jury Discretionary Award` prize value is on one physical line in the local raw visual check.
 
-## Physical line count for every cleaned CSV
-
-```sh
-$ wc -l data/cleaned/*.csv
-    29 data/cleaned/cliburn_2025_candidates.csv
-   169 data/cleaned/cliburn_2025_performances.csv
-    29 data/cleaned/cliburn_2025_repertoire_coverage.csv
-    29 data/cleaned/cliburn_2025_results.csv
-   234 data/cleaned/cliburn_2025_works.csv
-    69 data/cleaned/composer_aliases.csv
-   375 data/cleaned/performance_works.csv
-   169 data/cleaned/program_features.csv
-   234 data/cleaned/work_aliases.csv
-  1337 total
-```
-
-## Embedded-newline and header/record checks
+## Embedded-newline check for targeted files
 
 ```text
 data/cleaned/cliburn_2025_candidates.csv: physical_lines=29; records=28; headers=1; embedded_newline_cells=0; cr_bytes=0
-data/cleaned/cliburn_2025_performances.csv: physical_lines=169; records=168; headers=1; embedded_newline_cells=0; cr_bytes=0
-data/cleaned/cliburn_2025_repertoire_coverage.csv: physical_lines=29; records=28; headers=1; embedded_newline_cells=0; cr_bytes=0
 data/cleaned/cliburn_2025_results.csv: physical_lines=29; records=28; headers=1; embedded_newline_cells=0; cr_bytes=0
-data/cleaned/cliburn_2025_works.csv: physical_lines=234; records=233; headers=1; embedded_newline_cells=0; cr_bytes=0
-data/cleaned/composer_aliases.csv: physical_lines=69; records=68; headers=1; embedded_newline_cells=0; cr_bytes=0
-data/cleaned/performance_works.csv: physical_lines=375; records=374; headers=1; embedded_newline_cells=0; cr_bytes=0
-data/cleaned/program_features.csv: physical_lines=169; records=168; headers=1; embedded_newline_cells=0; cr_bytes=0
-data/cleaned/work_aliases.csv: physical_lines=234; records=233; headers=1; embedded_newline_cells=0; cr_bytes=0
 ```
 
-## Raw GitHub review safety
-
-Based on the committed file bytes verified locally and the `cat -A` physical-line view, the cleaned CSV files are safe for Raw GitHub review: LF line endings, one header line, one record per physical line, valid CSV quoting, and no embedded newline characters in cells.
-
-## Final committed-file checks
+## Committed-file checks
 
 ```sh
 $ git show HEAD:data/cleaned/cliburn_2025_candidates.csv | wc -l
@@ -93,6 +76,10 @@ $ git show HEAD:data/cleaned/cliburn_2025_results.csv | wc -l
 29
 ```
 
+## Raw GitHub status
+
+Not yet claimed. Success must not be claimed until the actual GitHub raw URLs for both targeted files show 29 physical lines.
+
 ## Recommendation
 
-PASS. The working-tree physical checks and the exact committed-file checks both show 29 physical lines for `cliburn_2025_candidates.csv` and 29 physical lines for `cliburn_2025_results.csv`.
+PENDING RAW GITHUB VERIFICATION.

@@ -1,29 +1,29 @@
-"candidate_id","full_name","program_rows","performance_work_rows","zero_work_feature_rows","coverage_status"
-"1","Piotr Alexewicz","6","13","0","complete_candidate_page_capture"
-"2","Jonas Aumiller","6","15","0","complete_candidate_page_capture"
-"3","Alice Burla","6","16","0","complete_candidate_page_capture"
-"4","Yangrui Cai","6","13","0","complete_candidate_page_capture"
-"5","Elia Cecino","6","14","0","complete_candidate_page_capture"
-"6","Yanjun Chen","6","16","0","complete_candidate_page_capture"
-"7","Jiarui Cheng","6","12","0","complete_candidate_page_capture"
-"8","Federico Gad Crema","6","13","0","complete_candidate_page_capture"
-"9","Shangru Du","6","16","0","complete_candidate_page_capture"
-"10","Roman Fediurko","6","13","0","complete_candidate_page_capture"
-"11","Magdalene Ho","6","13","0","complete_candidate_page_capture"
-"12","Carter Johnson","6","16","0","complete_candidate_page_capture"
-"13","Xiaofu Ju","6","13","0","complete_candidate_page_capture"
-"14","Mikhail Kambarov","6","13","0","complete_candidate_page_capture"
-"15","David Khrikuli","6","14","0","complete_candidate_page_capture"
-"16","Pedro López Salas","6","12","0","complete_candidate_page_capture"
-"17","Philipp Lynov","6","10","0","complete_candidate_page_capture"
-"18","Jonathan Mamora","6","11","0","complete_candidate_page_capture"
-"19","Callum McLachlan","6","14","0","complete_candidate_page_capture"
-"20","Evren Ozel","6","11","0","complete_candidate_page_capture"
-"21","Chaeyoung Park","6","14","0","complete_candidate_page_capture"
-"22","Aristo Sham","6","10","0","complete_candidate_page_capture"
-"23","Kotaro Shigemori","6","12","0","complete_candidate_page_capture"
-"24","Vitaly Starikov","6","13","0","complete_candidate_page_capture"
-"25","Angel Stanislav Wang","6","16","0","complete_candidate_page_capture"
-"26","Xuanxiang Wu","6","15","0","complete_candidate_page_capture"
-"27","Ryota Yamazaki","6","12","0","complete_candidate_page_capture"
-"28","Sung Ho Yoo","6","14","0","complete_candidate_page_capture"
+candidate_id,full_name,program_rows,performance_work_rows,zero_work_feature_rows,coverage_status
+1,Piotr Alexewicz,6,13,0,complete_candidate_page_capture
+2,Jonas Aumiller,6,15,0,complete_candidate_page_capture
+3,Alice Burla,6,16,0,complete_candidate_page_capture
+4,Yangrui Cai,6,13,0,complete_candidate_page_capture
+5,Elia Cecino,6,14,0,complete_candidate_page_capture
+6,Yanjun Chen,6,16,0,complete_candidate_page_capture
+7,Jiarui Cheng,6,12,0,complete_candidate_page_capture
+8,Federico Gad Crema,6,13,0,complete_candidate_page_capture
+9,Shangru Du,6,16,0,complete_candidate_page_capture
+10,Roman Fediurko,6,13,0,complete_candidate_page_capture
+11,Magdalene Ho,6,13,0,complete_candidate_page_capture
+12,Carter Johnson,6,16,0,complete_candidate_page_capture
+13,Xiaofu Ju,6,13,0,complete_candidate_page_capture
+14,Mikhail Kambarov,6,13,0,complete_candidate_page_capture
+15,David Khrikuli,6,14,0,complete_candidate_page_capture
+16,Pedro López Salas,6,12,0,complete_candidate_page_capture
+17,Philipp Lynov,6,10,0,complete_candidate_page_capture
+18,Jonathan Mamora,6,11,0,complete_candidate_page_capture
+19,Callum McLachlan,6,14,0,complete_candidate_page_capture
+20,Evren Ozel,6,11,0,complete_candidate_page_capture
+21,Chaeyoung Park,6,14,0,complete_candidate_page_capture
+22,Aristo Sham,6,10,0,complete_candidate_page_capture
+23,Kotaro Shigemori,6,12,0,complete_candidate_page_capture
+24,Vitaly Starikov,6,13,0,complete_candidate_page_capture
+25,Angel Stanislav Wang,6,16,0,complete_candidate_page_capture
+26,Xuanxiang Wu,6,15,0,complete_candidate_page_capture
+27,Ryota Yamazaki,6,12,0,complete_candidate_page_capture
+28,Sung Ho Yoo,6,14,0,complete_candidate_page_capture
