@@ -1,11 +1,11 @@
 # Post-merge audit: Van Cliburn 2025 v1
 
 Date: 2026-07-05
-Scope: post-merge audit of existing cleaned Van Cliburn 2025 CSVs only. No new competition was collected, and no feature/API/recommendation work was added.
+Scope: post-merge audit and CSV-format repair of existing cleaned Van Cliburn 2025 CSVs only. No new competition was collected, and no feature/API/recommendation work was added.
 
 ## Files reloaded
 
-All cleaned CSV files under `data/cleaned/` were reloaded with Python's standard `csv` module because `pandas` is not installed in the environment.
+All cleaned CSV files under `data/cleaned/` were reloaded with Python's standard `csv` module because `pandas` is not installed in the environment. Each file was then rewritten through `csv.writer(..., lineterminator="\n")` after replacing any embedded `\r`, `\n`, or `\r\n` inside cells with spaces.
 
 | File | Rows |
 | --- | ---: |
@@ -19,9 +19,25 @@ All cleaned CSV files under `data/cleaned/` were reloaded with Python's standard
 | `data/cleaned/composer_aliases.csv` | 68 |
 | `data/cleaned/work_aliases.csv` | 233 |
 
+## Physical line-count check
+
+Physical line counts were checked directly from file bytes after rewriting. Each cleaned CSV now has LF-only line endings, zero CR bytes, zero embedded-newline cells, and physical line counts equal to parsed CSV rows.
+
+| File | Physical lines | Parsed rows | CR bytes | Embedded-newline cells |
+| --- | ---: | ---: | ---: | ---: |
+| `data/cleaned/cliburn_2025_candidates.csv` | 29 | 29 | 0 | 0 |
+| `data/cleaned/cliburn_2025_performances.csv` | 169 | 169 | 0 | 0 |
+| `data/cleaned/cliburn_2025_repertoire_coverage.csv` | 29 | 29 | 0 | 0 |
+| `data/cleaned/cliburn_2025_results.csv` | 29 | 29 | 0 | 0 |
+| `data/cleaned/cliburn_2025_works.csv` | 234 | 234 | 0 | 0 |
+| `data/cleaned/composer_aliases.csv` | 69 | 69 | 0 | 0 |
+| `data/cleaned/performance_works.csv` | 375 | 375 | 0 | 0 |
+| `data/cleaned/program_features.csv` | 169 | 169 | 0 | 0 |
+| `data/cleaned/work_aliases.csv` | 234 | 234 | 0 | 0 |
+
 ## Automated checks
 
-`python src/validation/run_all.py` was rerun after the merge. It passed all validation checks; its generated `reports/data_quality_report.md` output was not retained because this audit found no data-quality issues requiring changes to that existing report.
+`python src/validation/run_all.py` was rerun after the CSV rewrite. It passed all validation checks; its generated `reports/data_quality_report.md` output was not retained because the requested durable audit artifact is this post-merge report.
 
 | Check | Result | Notes |
 | --- | --- | --- |
@@ -41,7 +57,7 @@ All cleaned CSV files under `data/cleaned/` were reloaded with Python's standard
 - Source URL fields are populated in candidate, result, performance, and performance-work files.
 - Duplicate-work validation did not find duplicate normalized composer/title keys in `cliburn_2025_works.csv`.
 - `program_features.csv` has 168 rows, matching the 28 candidates × 6 program sections represented in `cliburn_2025_performances.csv`; each row has at least one work and the work counts match `performance_works.csv`.
-- No data issues were found that required CSV corrections.
+- CSV formatting was repaired by rewriting every cleaned CSV with `csv.writer` and LF line terminators; the tracked diff normalizes `program_features.csv`, while the other cleaned CSVs already matched the target byte format in this working tree after rewrite.
 
 ## Random sample source comparison
 
@@ -67,4 +83,4 @@ Random sampling used `random.seed(20250705)` and sampled 5 candidates from `clib
 
 ## Issues and fixes
 
-No issues were found. No cleaned CSV files were changed.
+Issue found: the audit needed to verify raw CSV physical line formatting directly, not only logical CSV parsing. Fix applied: every cleaned CSV was rewritten with Python `csv.writer` using `lineterminator="\n"`, embedded newlines were stripped from all cells, and direct byte-level physical line counts now match parsed CSV rows for every cleaned CSV.
