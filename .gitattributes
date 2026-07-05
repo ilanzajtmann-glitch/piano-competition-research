@@ -6,3 +6,6 @@
 *.toml text eol=lf
 *.yaml text eol=lf
 *.yml text eol=lf
+
+# Keep cleaned CSV artifacts byte-stable in GitHub/raw views and checkouts.
+data/cleaned/*.csv text eol=lf

@@ -21,7 +21,7 @@ All cleaned CSV files under `data/cleaned/` were reloaded with Python's standard
 
 ## Physical line-count check
 
-Physical line counts were checked directly from file bytes after rewriting. Each cleaned CSV now has LF-only line endings, zero CR bytes, zero embedded-newline cells, and physical line counts equal to parsed CSV rows.
+Physical line counts were checked directly from file bytes after rewriting. Each cleaned CSV blob in the local commit has LF-only line endings, zero CR bytes, zero embedded-newline cells, and physical line counts equal to parsed CSV rows. The existing `.gitattributes` LF policy is retained and `data/cleaned/*.csv` is explicitly pinned to `text eol=lf` for GitHub/raw views and checkouts.
 
 | File | Physical lines | Parsed rows | CR bytes | Embedded-newline cells |
 | --- | ---: | ---: | ---: | ---: |
@@ -37,18 +37,18 @@ Physical line counts were checked directly from file bytes after rewriting. Each
 
 ## Automated checks
 
-`python src/validation/run_all.py` was rerun after the CSV rewrite. It passed all validation checks; its generated `reports/data_quality_report.md` output was not retained because the requested durable audit artifact is this post-merge report.
+`python src/validation/run_all.py` was rerun after the CSV rewrite and completed successfully in the local checkout; its generated `reports/data_quality_report.md` output was not retained because the requested durable audit artifact is this post-merge report.
 
-| Check | Result | Notes |
+| Check | Local result | Notes |
 | --- | --- | --- |
-| CSV integrity | PASS | 9 cleaned CSV files have headers, LF line endings, one record per line, and consistent quoting. |
-| Candidate count | PASS | 28 candidates. |
-| Result consistency | PASS | 6 finalists; laureate and reached-round flags are consistent. |
-| Source URLs | PASS | Required source URL columns are populated and start with `http`. |
-| Duplicate works | PASS | No duplicate normalized composer/title work keys. |
-| Repertoire completeness | PASS | All 28 candidates have six candidate-page program sections and at least one work per section. |
-| Feature consistency | PASS | `program_features.num_works` matches `performance_works`; no zero-work feature rows. |
-| Missing-data report | PASS | Only expected optional fields are empty. |
+| CSV integrity | completed | 9 cleaned CSV files have headers, LF line endings, one record per line, and consistent quoting in the local commit. |
+| Candidate count | completed | 28 candidates. |
+| Result consistency | completed | 6 finalists; laureate and reached-round flags are consistent. |
+| Source URLs | completed | Required source URL columns are populated and start with `http`. |
+| Duplicate works | completed | No duplicate normalized composer/title work keys. |
+| Repertoire completeness | completed | All 28 candidates have six candidate-page program sections and at least one work per section. |
+| Feature consistency | completed | `program_features.num_works` matches `performance_works`; no zero-work feature rows. |
+| Missing-data report | completed | Only expected optional fields are empty. |
 
 ## Targeted audit findings
 
@@ -65,11 +65,11 @@ Random sampling used `random.seed(20250705)` and sampled 5 candidates from `clib
 
 | Candidate | CSV result | Source result comparison | Repertoire source comparison | Status |
 | --- | --- | --- | --- | --- |
-| Mikhail Kambarov | Quarterfinal; John Giordano Jury Chairman Discretionary Award | Prize confirmed on the official Prizes and Awards page. | Candidate page lists the same six program sections and works, including Chopin Ballade No. 3, Montero `Rachtime`, Scarlatti K. 213, Rachmaninov Corelli Variations, Messiaen, Beethoven op. 111, Scriabin, Haydn, Chopin Sonata No. 3, Mozart K. 450, Chopin Concerto No. 1, and Tchaikovsky Concerto No. 1. | PASS |
-| Magdalene Ho | Preliminary | Not listed among official semifinalists; CSV preliminary-only status is consistent. | Candidate page lists the same six program sections and works, including Bach BWV 912, Franck, Montero, Saint-Saëns, Liszt Dante Sonata, Sweelinck, Scriabin White Mass, Mozart K. 475, Adès, Schumann, Mozart K. 459, Beethoven Concerto No. 4, and Brahms Concerto No. 1. | PASS |
-| Roman Fediurko | Preliminary | Not listed among official semifinalists; CSV preliminary-only status is consistent. | Candidate page lists the same six program sections and works, including Bach BWV 887, Montero, Rachmaninov `Élégie`, Rachmaninov Sonata No. 2, Scriabin Sonata-Fantasy, Schumann Sonata No. 2, Hofmann, Schumann Presto passionato, Rachmaninov Moments musicaux, Chopin Sonata No. 3, Mozart K. 491, Beethoven Concerto No. 5, and Rachmaninov Concerto No. 3. | PASS |
-| Elia Cecino | Semifinal | Listed among official semifinalists; CSV semifinal status is consistent. | Candidate page lists the same six program sections and works, including Shostakovich op. 87 no. 21, Montero, Beethoven op. 31 no. 1, Gounod–Liszt, Haydn Hob. XVI:34, Mendelssohn, Scriabin, Tchaikovsky, Schumann, Gubaidulina, Prokofiev, Mozart K. 491, Beethoven Concerto No. 3, and Tchaikovsky Concerto No. 1. | PASS |
-| Pedro López Salas | Preliminary | Not listed among official semifinalists; CSV preliminary-only status is consistent. | Candidate page lists the same six program sections and works, including Mozart K. 330, Montero, Ginastera, Soler R. 87, Soler R. 84, Mussorgsky, Haydn Hob. XVI:12, Schumann Kreisleriana, de Falla, Mozart K. 467, Beethoven Concerto No. 3, and Prokofiev Concerto No. 3. | PASS |
+| Mikhail Kambarov | Quarterfinal; John Giordano Jury Chairman Discretionary Award | Prize confirmed on the official Prizes and Awards page. | Candidate page lists the same six program sections and works, including Chopin Ballade No. 3, Montero `Rachtime`, Scarlatti K. 213, Rachmaninov Corelli Variations, Messiaen, Beethoven op. 111, Scriabin, Haydn, Chopin Sonata No. 3, Mozart K. 450, Chopin Concerto No. 1, and Tchaikovsky Concerto No. 1. | matched locally |
+| Magdalene Ho | Preliminary | Not listed among official semifinalists; CSV preliminary-only status is consistent. | Candidate page lists the same six program sections and works, including Bach BWV 912, Franck, Montero, Saint-Saëns, Liszt Dante Sonata, Sweelinck, Scriabin White Mass, Mozart K. 475, Adès, Schumann, Mozart K. 459, Beethoven Concerto No. 4, and Brahms Concerto No. 1. | matched locally |
+| Roman Fediurko | Preliminary | Not listed among official semifinalists; CSV preliminary-only status is consistent. | Candidate page lists the same six program sections and works, including Bach BWV 887, Montero, Rachmaninov `Élégie`, Rachmaninov Sonata No. 2, Scriabin Sonata-Fantasy, Schumann Sonata No. 2, Hofmann, Schumann Presto passionato, Rachmaninov Moments musicaux, Chopin Sonata No. 3, Mozart K. 491, Beethoven Concerto No. 5, and Rachmaninov Concerto No. 3. | matched locally |
+| Elia Cecino | Semifinal | Listed among official semifinalists; CSV semifinal status is consistent. | Candidate page lists the same six program sections and works, including Shostakovich op. 87 no. 21, Montero, Beethoven op. 31 no. 1, Gounod–Liszt, Haydn Hob. XVI:34, Mendelssohn, Scriabin, Tchaikovsky, Schumann, Gubaidulina, Prokofiev, Mozart K. 491, Beethoven Concerto No. 3, and Tchaikovsky Concerto No. 1. | matched locally |
+| Pedro López Salas | Preliminary | Not listed among official semifinalists; CSV preliminary-only status is consistent. | Candidate page lists the same six program sections and works, including Mozart K. 330, Montero, Ginastera, Soler R. 87, Soler R. 84, Mussorgsky, Haydn Hob. XVI:12, Schumann Kreisleriana, de Falla, Mozart K. 467, Beethoven Concerto No. 3, and Prokofiev Concerto No. 3. | matched locally |
 
 ## Source URLs consulted for the random sample
 
@@ -84,3 +84,8 @@ Random sampling used `random.seed(20250705)` and sampled 5 candidates from `clib
 ## Issues and fixes
 
 Issue found: the audit needed to verify raw CSV physical line formatting directly, not only logical CSV parsing. Fix applied: every cleaned CSV was rewritten with Python `csv.writer` using `lineterminator="\n"` and `quoting=csv.QUOTE_ALL`, embedded newlines were stripped from all cells, and direct byte-level physical line counts now match parsed CSV rows for every cleaned CSV.
+
+
+## Raw GitHub display verification
+
+This repository checkout has no GitHub remote URL available to fetch a PR raw-file URL from inside the container, so this audit does not claim that GitHub raw display has been independently verified here. The committed CSV blobs themselves were checked directly with byte counts, and `.gitattributes` pins cleaned CSV checkout/rendering to LF line endings. Raw GitHub should be verified on the opened PR before merge.
