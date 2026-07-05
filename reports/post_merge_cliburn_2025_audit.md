@@ -69,10 +69,10 @@ data/cleaned/cliburn_2025_results.csv: physical_lines=29; records=28; headers=1;
 ## Committed-file checks
 
 ```sh
-$ git show HEAD:data/cleaned/cliburn_2025_candidates.csv | wc -l
+$ git show HEAD:data/cleaned/cliburn_2025_candidates.csv | python -c "import sys; print(sys.stdin.read().count('\n'))"
 29
 
-$ git show HEAD:data/cleaned/cliburn_2025_results.csv | wc -l
+$ git show HEAD:data/cleaned/cliburn_2025_results.csv | python -c "import sys; print(sys.stdin.read().count('\n'))"
 29
 ```
 
