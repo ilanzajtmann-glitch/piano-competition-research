@@ -62,3 +62,15 @@ data/cleaned/cliburn_2025_works.csv: 233 rows
   notes: 233 empty
 
 ```
+
+## program_features.csv formatting audit: PASS
+```
+header_line: 1
+physical_lines: 169
+parsed_records: 169
+data_records: 168
+notes_nonempty_rows: 0
+embedded_newline_cells: 0
+cr_bytes: 0
+```
+
