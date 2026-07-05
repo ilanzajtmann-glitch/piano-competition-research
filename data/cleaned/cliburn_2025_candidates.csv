@@ -1,29 +1,29 @@
-candidate_id,full_name,nationality,birth_year,source_url
-1,Piotr Alexewicz,Poland,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/piotr-alexewicz
-2,Jonas Aumiller,Germany,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/jonas-aumiller
-3,Alice Burla,Canada,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/alice-burla
-4,Yangrui Cai,China,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/yangrui-cai
-5,Elia Cecino,Italy,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/elia-cecino
-6,Yanjun Chen,China,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/yanjun-chen
-7,Jiarui Cheng,China,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/jiarui-cheng
-8,Federico Gad Crema,Italy,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/federico-gad-crema
-9,Shangru Du,China,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/shangru-du
-10,Roman Fediurko,Ukraine,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/roman-fediurko
-11,Magdalene Ho,Malaysia,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/magdalene-ho
-12,Carter Johnson,Canada / United States,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/carter-johnson
-13,Xiaofu Ju,China,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/xiaofu-ju
-14,Mikhail Kambarov,Russia,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/mikhail-kambarov
-15,David Khrikuli,Georgia,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/david-khrikuli
-16,Pedro López Salas,Spain,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/pedro-lopez-salas
-17,Philipp Lynov,Russia,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/philipp-lynov
-18,Jonathan Mamora,United States,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/jonathan-mamora
-19,Callum McLachlan,United Kingdom,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/callum-mclachlan
-20,Evren Ozel,United States,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/evren-ozel
-21,Chaeyoung Park,South Korea,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/chaeyoung-park
-22,Aristo Sham,"Hong Kong, China",,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/aristo-sham
-23,Kotaro Shigemori,Japan,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/kotaro-shigemori
-24,Vitaly Starikov,Israel / Russia,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/vitaly-starikov
-25,Angel Stanislav Wang,United States,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/angel-stanislav-wang
-26,Xuanxiang Wu,China,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/xuanxiang-wu
-27,Ryota Yamazaki,Japan,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/ryota-yamazaki
-28,Sung Ho Yoo,South Korea,,https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/sung-ho-yoo
+"candidate_id","full_name","nationality","birth_year","source_url"
+"1","Piotr Alexewicz","Poland","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/piotr-alexewicz"
+"2","Jonas Aumiller","Germany","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/jonas-aumiller"
+"3","Alice Burla","Canada","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/alice-burla"
+"4","Yangrui Cai","China","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/yangrui-cai"
+"5","Elia Cecino","Italy","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/elia-cecino"
+"6","Yanjun Chen","China","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/yanjun-chen"
+"7","Jiarui Cheng","China","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/jiarui-cheng"
+"8","Federico Gad Crema","Italy","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/federico-gad-crema"
+"9","Shangru Du","China","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/shangru-du"
+"10","Roman Fediurko","Ukraine","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/roman-fediurko"
+"11","Magdalene Ho","Malaysia","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/magdalene-ho"
+"12","Carter Johnson","Canada / United States","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/carter-johnson"
+"13","Xiaofu Ju","China","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/xiaofu-ju"
+"14","Mikhail Kambarov","Russia","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/mikhail-kambarov"
+"15","David Khrikuli","Georgia","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/david-khrikuli"
+"16","Pedro López Salas","Spain","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/pedro-lopez-salas"
+"17","Philipp Lynov","Russia","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/philipp-lynov"
+"18","Jonathan Mamora","United States","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/jonathan-mamora"
+"19","Callum McLachlan","United Kingdom","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/callum-mclachlan"
+"20","Evren Ozel","United States","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/evren-ozel"
+"21","Chaeyoung Park","South Korea","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/chaeyoung-park"
+"22","Aristo Sham","Hong Kong, China","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/aristo-sham"
+"23","Kotaro Shigemori","Japan","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/kotaro-shigemori"
+"24","Vitaly Starikov","Israel / Russia","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/vitaly-starikov"
+"25","Angel Stanislav Wang","United States","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/angel-stanislav-wang"
+"26","Xuanxiang Wu","China","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/xuanxiang-wu"
+"27","Ryota Yamazaki","Japan","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/ryota-yamazaki"
+"28","Sung Ho Yoo","South Korea","","https://cliburn.org/competitions/2025-cliburn-competition/2025-competitors/sung-ho-yoo"

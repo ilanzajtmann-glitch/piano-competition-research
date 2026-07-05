@@ -5,7 +5,7 @@ Scope: post-merge audit and CSV-format repair of existing cleaned Van Cliburn 20
 
 ## Files reloaded
 
-All cleaned CSV files under `data/cleaned/` were reloaded with Python's standard `csv` module because `pandas` is not installed in the environment. Each file was then rewritten through `csv.writer(..., lineterminator="\n")` after replacing any embedded `\r`, `\n`, or `\r\n` inside cells with spaces.
+All cleaned CSV files under `data/cleaned/` were reloaded with Python's standard `csv` module because `pandas` is not installed in the environment. Each file was then rewritten through `csv.writer(..., lineterminator="\n", quoting=csv.QUOTE_ALL)` after replacing any embedded `\r`, `\n`, or `\r\n` inside cells with spaces.
 
 | File | Rows |
 | --- | ---: |
@@ -57,7 +57,7 @@ Physical line counts were checked directly from file bytes after rewriting. Each
 - Source URL fields are populated in candidate, result, performance, and performance-work files.
 - Duplicate-work validation did not find duplicate normalized composer/title keys in `cliburn_2025_works.csv`.
 - `program_features.csv` has 168 rows, matching the 28 candidates × 6 program sections represented in `cliburn_2025_performances.csv`; each row has at least one work and the work counts match `performance_works.csv`.
-- CSV formatting was repaired by rewriting every cleaned CSV with `csv.writer` and LF line terminators; the tracked diff normalizes `program_features.csv`, while the other cleaned CSVs already matched the target byte format in this working tree after rewrite.
+- CSV formatting was repaired by rewriting every cleaned CSV with `csv.writer`, LF line terminators, and `csv.QUOTE_ALL`, forcing the actual cleaned CSV files into a consistent one-record-per-physical-line representation in the tracked diff.
 
 ## Random sample source comparison
 
@@ -83,4 +83,4 @@ Random sampling used `random.seed(20250705)` and sampled 5 candidates from `clib
 
 ## Issues and fixes
 
-Issue found: the audit needed to verify raw CSV physical line formatting directly, not only logical CSV parsing. Fix applied: every cleaned CSV was rewritten with Python `csv.writer` using `lineterminator="\n"`, embedded newlines were stripped from all cells, and direct byte-level physical line counts now match parsed CSV rows for every cleaned CSV.
+Issue found: the audit needed to verify raw CSV physical line formatting directly, not only logical CSV parsing. Fix applied: every cleaned CSV was rewritten with Python `csv.writer` using `lineterminator="\n"` and `quoting=csv.QUOTE_ALL`, embedded newlines were stripped from all cells, and direct byte-level physical line counts now match parsed CSV rows for every cleaned CSV.
