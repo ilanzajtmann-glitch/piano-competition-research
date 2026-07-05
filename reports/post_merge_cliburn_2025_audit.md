@@ -25,7 +25,7 @@ All cleaned CSV files under `data/cleaned/` were reloaded with Python's standard
 
 ## Physical validation
 
-Physical validation opened the raw bytes exactly as stored in the repository checkout. For each file, byte-level LF counts, `bytes.splitlines()`, Python `csv.reader`, Ruby `CSV.read`, and SQLite `.import --csv` were cross-checked. No valid parser disagreement was found.
+Physical validation opened the raw bytes exactly as stored in the repository checkout and used `wc -l`/LF-byte counts as the primary evidence for physical line counts. CSV parsers were used only as secondary readability checks, not as proof of physical line counts.
 
 | File | LF bytes / physical lines | `splitlines()` rows | Python parsed rows | Ruby parsed rows | SQLite data rows | CR bytes | Embedded-newline cells |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -39,10 +39,17 @@ Physical validation opened the raw bytes exactly as stored in the repository che
 | `data/cleaned/program_features.csv` | 169 | 169 | 169 | 169 | 168 | 0 | 0 |
 | `data/cleaned/work_aliases.csv` | 234 | 234 | 234 | 234 | 233 | 0 | 0 |
 
-Targeted raw-byte checks for the files previously reported as malformed:
+Targeted raw physical-line checks for the files previously reported as malformed:
 
-- `cliburn_2025_candidates.csv`: 29 physical LF-delimited lines, 29 parsed rows, 28 data records, 0 CR bytes, 0 embedded-newline cells.
-- `cliburn_2025_results.csv`: 29 physical LF-delimited lines, 29 parsed rows, 28 data records, 0 CR bytes, 0 embedded-newline cells. Prize fields including `Raymond E. Buck Jury Discretionary Award` are single-cell, single-record values.
+```
+$ wc -l data/cleaned/cliburn_2025_candidates.csv
+29 data/cleaned/cliburn_2025_candidates.csv
+$ wc -l data/cleaned/cliburn_2025_results.csv
+29 data/cleaned/cliburn_2025_results.csv
+```
+
+- `cliburn_2025_candidates.csv`: header is physical line 1, candidate rows occupy physical lines 2 through 29, 0 CR bytes, 0 embedded-newline cells.
+- `cliburn_2025_results.csv`: header is physical line 1, result rows occupy physical lines 2 through 29, 0 CR bytes, 0 embedded-newline cells. Prize fields including `Raymond E. Buck Jury Discretionary Award` are single-cell, single-record values.
 
 `.gitattributes` retains the repository LF policy and explicitly pins `data/cleaned/*.csv` to `text eol=lf` for GitHub/raw views and checkouts.
 
@@ -53,7 +60,7 @@ Targeted raw-byte checks for the files previously reported as malformed:
 | Missing candidates | Counted candidate rows and compared candidate IDs against results. | No contradiction found: 28 candidates and the same 28 candidate IDs in results. |
 | Duplicated candidates | Checked uniqueness of `candidate_id`. | No duplicate candidate IDs found. |
 | Duplicated works | Checked normalized `(composer_id, normalized_title)` keys. | No duplicate normalized work keys found. |
-| Malformed CSV files | Compared byte line counts, `splitlines()`, Python CSV rows, Ruby CSV rows, SQLite imports, CR bytes, final LF, row widths, and embedded-newline cells. | No contradiction found in valid parser/byte checks. |
+| Malformed CSV files | Used `wc -l` and LF-byte counts as primary physical-line checks; separately checked CR bytes, final LF, embedded-newline cells, Python CSV, Ruby CSV, and SQLite imports. | `wc -l` gives 29 for candidates and 29 for results; no secondary parser/readability contradiction found. |
 | Contradictory round information | Checked reached-round flags for Preliminary, Quarterfinal, Semifinal, and Final. | No contradictory round flags found. |
 | Incorrect laureate information | Checked finalist count and laureate ranks. | 6 finalists and laureate ranks `1`, `2`, and `3` found. |
 | Missing source URLs | Checked source URL fields in candidates, results, performances, and performance works. | Required URL fields begin with `http`. |
@@ -110,10 +117,10 @@ No valid regenerated test failed. A deliberately naive regular-expression scan w
 
 ## Confidence level
 
-Medium-high for CSV physical integrity and internal logical consistency because multiple independent local parsers and byte-level checks agree. Medium for source fidelity because only 5 of 28 candidates were source-sampled in this post-merge audit.
+Medium-high for local CSV physical integrity because `wc -l`, LF-byte counts, and raw-byte checks agree on the disputed files. Medium-high for internal logical consistency because secondary parsers and project validators agree. Medium for source fidelity because only 5 of 28 candidates were source-sampled in this post-merge audit.
 
 ## Recommendation
 
 PASS WITH RESERVATIONS.
 
-Rationale: I actively attempted to falsify the dataset and found no valid local physical or logical contradiction. The reservation is that Raw GitHub rendering could not be independently fetched from this container and must be checked on the PR before merge.
+Rationale: I actively attempted to falsify the dataset and found no valid local physical or logical contradiction. The exact required local commands `wc -l data/cleaned/cliburn_2025_candidates.csv` and `wc -l data/cleaned/cliburn_2025_results.csv` both return 29. The reservation is that Raw GitHub rendering could not be independently fetched from this container and must be checked on the PR before merge.
